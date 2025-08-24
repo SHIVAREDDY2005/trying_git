@@ -7,3 +7,244 @@ by git commit -a -m "comment" no need of staging
 
 to see what changes happen --git diff  (diff between working directory and local)
 to see what changes happen --git diff --staged (diff between staging and local)
+
+
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git --version
+git version 2.47.1.windows.2
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git  config
+error: no action specified
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git config --global --list
+user.name=SHIVAREDDY2005
+user.email=surkantishivareddyoff@gmail.com
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git>
+
+                                                  
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git init
+Initialized empty Git repository in C:/Users/shiva/OneDrive/Desktop/Btech/git/.git/
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git init -b main
+Initialized empty Git repository in C:/Users/shiva/OneDrive/Desktop/Btech/git/.git/
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git add first.txt
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+On branch main
+
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git log
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+
+No commits yet
+
+Changes to be committed:
+
+No commits yet
+
+
+No commits yet
+
+
+No commits yet
+No commits yet
+
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git log
+fatal: your current branch 'main' does not have any commits yet
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git commit  -m "my first commit"
+[main (root-commit) ef61f7f] my first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.txt
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git log
+commit ef61f7f3624dc85173978c69fbf0914f27cf9874 (HEAD -> main)
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:16:16 2025 +0530
+
+    my first commit
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> got add first.txt
+got : The term 'got' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the 
+name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ got add first.txt
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (got:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git add first.txt
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git commit -m "first change in text"
+[main 8062722] first change in text
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git log
+commit 8062722134eeec3ed75b08ae65fc6b938c037cd6 (HEAD -> main)
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:27:38 2025 +0530
+
+    first change in text
+
+commit ef61f7f3624dc85173978c69fbf0914f27cf9874
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:16:16 2025 +0530
+
+    my first commit
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git commit -a -m "without staging"
+[main fa8f990] without staging
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git log
+commit fa8f990947ed00b83ffbbd5a36e1fe30eef70a3c (HEAD -> main)
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:32:20 2025 +0530
+
+    without staging
+
+commit 8062722134eeec3ed75b08ae65fc6b938c037cd6
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:27:38 2025 +0530
+
+    first change in text
+
+commit ef61f7f3624dc85173978c69fbf0914f27cf9874
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:16:16 2025 +0530
+
+    my first commit
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git diff
+diff --git a/first.txt b/first.txt
+index 16e4a5d..e094f47 100644
+--- a/first.txt
++++ b/first.txt
+@@ -3,4 +3,6 @@ changing to see what happens --use git status
+ in real directory
+     by git add filename         ->staging
+     by git commit -m "comment"  ->local file
+-by git commit -a -m "comment" no need of staging
+\ No newline at end of file
++by git commit -a -m "comment" no need of staging 
++
++to see what changes happen --git diff
+\ No newline at end of file
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git commit -a -m "without staging"
+[main 2c849ac] without staging
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git add first.txt
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git diff 
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git diff --staged
+diff --git a/first.txt b/first.txt
+index e094f47..37fb617 100644
+--- a/first.txt
++++ b/first.txt
+@@ -5,4 +5,5 @@ in real directory
+     by git commit -m "comment"  ->local file
+ by git commit -a -m "comment" no need of staging
+
+-to see what changes happen --git diff
+\ No newline at end of file
++to see what changes happen --git diff  (diff between working directory and local)
++to see what changes happen --git diff --staged (diff between staging and local)
+\ No newline at end of file
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git commit -m "to see diff between stage and local"
+[main 97164fd] to see diff between stage and local
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\shiva\OneDrive\Desktop\Btech\git> git log
+commit 97164fddc3c42411694ccfca73e0615f396ba10e (HEAD -> main)
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:40:38 2025 +0530
+
+    to see diff between stage and local
+
+commit 2c849ac8cb9380a8bbbf1ebd127381dbf196281f
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:38:05 2025 +0530
+
+    without staging
+
+commit fa8f990947ed00b83ffbbd5a36e1fe30eef70a3c
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:32:20 2025 +0530
+
+    without staging
+
+commit 8062722134eeec3ed75b08ae65fc6b938c037cd6
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:27:38 2025 +0530
+
+    first change in text
+
+commit ef61f7f3624dc85173978c69fbf0914f27cf9874
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:16:16 2025 +0530
+
+    my first commit
+(END)
+    without staging
+
+commit fa8f990947ed00b83ffbbd5a36e1fe30eef70a3c
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:32:20 2025 +0530
+
+    without staging
+
+commit 8062722134eeec3ed75b08ae65fc6b938c037cd6
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:27:38 2025 +0530
+
+    first change in text
+
+commit ef61f7f3624dc85173978c69fbf0914f27cf9874
+Author: SHIVAREDDY2005 <surkantishivareddyoff@gmail.com>
+Date:   Sun Aug 24 13:16:16 2025 +0530
+
+    my first commit
+(END)
