@@ -1,2 +1,6 @@
 first file
 changing to see what happens --use git status
+in real directory
+    by git add filename         ->staging
+    by git commit -m "comment"  ->local file
+by git commit -a -m "comment" no need of staging 
