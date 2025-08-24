@@ -5,4 +5,5 @@ in real directory
     by git commit -m "comment"  ->local file
 by git commit -a -m "comment" no need of staging 
 
-to see what changes happen --git diff
+to see what changes happen --git diff  (diff between working directory and local)
+to see what changes happen --git diff --staged (diff between staging and local)
