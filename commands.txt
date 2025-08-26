@@ -1,4 +1,4 @@
-pc  ----->staging------->memory
+pc  ----->staging------->git
 
 M  == modified
 U  == untracked
@@ -7,6 +7,8 @@ A  == Added
 git --version
 git config --global --list
 git init
+git branch -M main
+        (or)
 git init -b main                -->to specify branch
 git status                      -->status
 git add filename                -->staging
@@ -17,3 +19,11 @@ git log                         --> to check all commits
 git diff                        -->(diff between working directory and local)
 git diff --staged               -->(diff between staging and local)
 git ls-files                    -->files in git
+git rm -cached filename         -->remove file from git
+git clone (http link of github project)
+
+
+
+
+ ssh-keygen -o              ->create ssh
+ (it generate .ssh folder in that file)cat id_ed25519.pub(contain key)
