@@ -1,0 +1,19 @@
+pc  ----->staging------->memory
+
+M  == modified
+U  == untracked
+A  == Added
+
+git --version
+git config --global --list
+git init
+git init -b main                -->to specify branch
+git status                      -->status
+git add filename                -->staging
+git add .                       -->add all files to staging
+git commit -m "comment"         -->local file
+git commit -a -m "comment"      --> no need of staging 
+git log                         --> to check all commits
+git diff                        -->(diff between working directory and local)
+git diff --staged               -->(diff between staging and local)
+git ls-files                    -->files in git
