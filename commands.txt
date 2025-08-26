@@ -27,3 +27,9 @@ git clone (http link of github project)
 
  ssh-keygen -o              ->create ssh
  (it generate .ssh folder in that file)cat id_ed25519.pub(contain key)
+
+
+git branch -M main
+git remote add origin https://github.com/SHIVAREDDY2005/trying_git.git     -->link
+git push -u origin main                                                    -->push files into gitnub
+git push origin main                                                       -->to add extra files to github later
